@@ -1,10 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>我的个人主页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李纪晨的个人主页</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* 容器布局 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 头部样式 */
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-bottom: 20px;
+        }
+
+        /* 详细信息区域 */
+        .info-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* 项目展示 */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .info-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>欢迎访问我的主页！</h1>
-    <p>这是我的第一个 GitHub Pages 网站。</p>
+    <div class="container">
+        <header>
+            <!-- 替换为你的头像 -->
+            <img src="CC&Me.jpg" alt="张三的头像" class="avatar">
+            <h1>李纪晨</h1>
+            <p>软件开发者 | 技术爱好者</p>
+        </header>
+
+        <div class="info-section">
+            <div class="card">
+                <h2>关于我</h2>
+                <p>我是充满热情的技术开发者，专注于Web开发领域，拥有3年全栈开发经验...</p>
+            </div>
+
+            <div class="card">
+                <h2>技能专长</h2>
+                <ul>
+                    <li>HTML/CSS/JavaScript</li>
+                    <li>Vue/React框架</li>
+                    <li>Node.js开发</li>
+                    <li>UI/UX设计</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>联系方式</h2>
+                <ul>
+                    <li>📧 zhangsan@email.com</li>
+                    <li>📱 +86 138-1234-5678</li>
+                    <li>📍 中国上海</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>教育背景</h2>
+                <p>XX大学 - 计算机科学专业 (2016-2020)</p>
+            </div>
+        </div>
+
+        <h2 style="margin-bottom: 20px;">项目展示</h2>
+        <div class="projects">
+            <!-- 项目1 -->
+            <div class="card project-card">
+                <img src="Meet.jpg" alt="项目1">
+                <h3>在线教育平台</h3>
+                <p>基于React的全栈在线学习系统，支持课程管理和实时互动...</p>
+            </div>
+            
+            <!-- 项目2 -->
+            <div class="card project-card">
+                <img src="CC.jpg" alt="项目2">
+                <h3>智能家居控制App</h3>
+                <p>物联网项目，通过移动端控制智能家居设备...</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
